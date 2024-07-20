@@ -1,10 +1,16 @@
-import ContactList from './components/ContactList.jsx'
+import { useState } from 'react';
+import ContactList from './components/ContactList.jsx';
+import SelectedContact from "./components/SelectedContact";
 
 function App() {
 
+  const [selectedContactId, setSelectedContactId] = useState(null);
+
   return (
     <>
-      <ContactList />
+      {
+        selectedContactId ? <p>Selected contact</p> : <ContactList setSelectedContactId={setSelectedContactId}/>
+      }
     </>
   )
 }
