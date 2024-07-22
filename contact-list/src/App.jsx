@@ -9,7 +9,8 @@ function App() {
   return (
     <>
       {
-        selectedContactId ? <p>Selected contact</p> : <ContactList setSelectedContactId={setSelectedContactId}/>
+        selectedContactId ? < SelectedContact selectedContactId={selectedContactId}setSelectedContactId={setSelectedContactId}/> : 
+        <ContactList setSelectedContactId={setSelectedContactId}/>
       }
     </>
   )
